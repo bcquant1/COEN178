@@ -1,0 +1,210 @@
+SQL> start /home/bquant/COEN178/labs/lab6/queries.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Trigger created.
+
+No errors.
+From Trigger Customer NO: c1 Customer Name: Smith City: SJ                      
+
+1 row created.
+
+From Trigger Customer NO: c2 Customer Name: Jones City: SJ                      
+
+1 row created.
+
+From Trigger Customer NO: c3 Customer Name: Peters City: SFO                    
+
+1 row created.
+
+From Trigger Customer NO: c20 Customer Name: Chen City: LA                      
+
+1 row created.
+
+From Trigger Customer NO: c33 Customer Name: Williams City: SFO                 
+
+1 row created.
+
+
+Trigger altered.
+
+
+Trigger created.
+
+No errors.
+
+0 rows deleted.
+
+
+0 rows deleted.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         2000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+
+1 row updated.
+
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         1000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+
+Trigger created.
+
+No errors.
+
+6 rows deleted.
+
+
+4 rows deleted.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         2000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+
+1 row updated.
+
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           6000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         1000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+
+Trigger created.
+
+No errors.
+
+CUSTN CUSTNAME   STREET                         CITY                            
+----- ---------- ------------------------------ --------------------            
+c1    Smith      32 Lincoln st                  SJ                              
+c2    Jones      44 Benton st                   SJ                              
+c3    Peters     12 palm st                     SFO                             
+c20   Chen       20 san felipo                  LA                              
+c33   Williams   11 cherry Ave                  SFO                             
+
+UPDATE BANKCUST_6
+       *
+ERROR at line 1:
+ORA-20999: Cannot update a Primary Key 
+ORA-06512: at "BQUANT.NOUPDATEPK_TRIG", line 3 
+ORA-04088: error during execution of trigger 'BQUANT.NOUPDATEPK_TRIG' 
+
+
+
+CUSTN CUSTNAME   STREET                         CITY                            
+----- ---------- ------------------------------ --------------------            
+c1    Smith      32 Lincoln st                  SJ                              
+c2    Jones      44 Benton st                   SJ                              
+c3    Peters     12 palm st                     SFO                             
+c20   Chen       20 san felipo                  LA                              
+c33   Williams   11 cherry Ave                  SFO                             
+
+SQL> spool off
