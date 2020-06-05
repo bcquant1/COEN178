@@ -1,0 +1,134 @@
+SQL> start /home/bquant/COEN178/labs/lab2/data.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO Schedule VALUES('dg5','c32','t')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (BQUANT.SYS_C00827553) violated - parent key 
+not found 
+
+/* INSERT INTO Schedule VALUES('dg5','c32','t'); doesn't work because custid of c32 doesn't exist in the Customer table*/
+
+SQL> INSERT INTO VALUES('dsg2','c1','s');
+INSERT INTO VALUES('dsg2','c1','s')
+            *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+/* INSERT INTO VALUES('dsg2','c1','s'); doesn't work because s is not a valid day*/
+
+SQL> INSERT INTO Schedule VALUES('dsg1','a1','r');
+
+1 row created.
+
+SQL> INSERT INTO Schedule VALUES('dsg2','c7','f');
+
+1 row created.
+
+SQL> spool off
+
+SQL> SELECT * FROM Customer;
+
+CUSTI FIRSTNAME  LASTNAME    CITY
+----- ---------- --------------- ----------
+c1    John   Smith	 SJ
+c2    Mary   Jones	 SFO
+a1    Vincent	 Chen	     SJ
+a12   Greg   King	 SJ
+c7    James  Bond	 LA
+x10   Susan  Blogg	 SFO
+c4    Steph  Curry	 SFO
+q1    Bat    Man	 Gotham
+
+8 rows selected.
+
+SQL> SELECT * FROM DeliveryService;
+
+SERVICEID  ITEM	       LOCATION	   SERVICEFEE
+---------- --------------- --------------- ----------
+dsg1	   grocery     SJ	       25
+dsb1	   books       SJ	       10
+dsm2	   movies      LA	       10
+dby3	   babygoods   SFO	       15
+dsg2	   grocery     SFO	       20
+dg5        greengoods  SFO	       30
+dubs5	   jerseys     SFO	       123.45
+dxy5	   cars	       Atlantis	       56.78
+
+8 rows selected.
+
+SQL> SELECT * FROM Schedule;
+
+SERVICEID  CUSTI DA
+---------- ----- --
+dsg1	   c1	 m
+dsg1	   a12	 w
+dby3	   x10	 f
+dg5        c1    r
+dg5        c1    t
+dsg1	   a1	 r
+dsg2	   c7	 f
+
+7 rows selected.
+
