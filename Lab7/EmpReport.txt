@@ -1,0 +1,20 @@
+
+                         Employee Listing  May 18, 2020                                             
+                                                                                                                        
+Name                 Depar        Salary                                                                                
+-------------------- ----- -------------                                                                                
+J.Smith              d1         $100,000                                                                                
+M.Jones              d1         $120,000                                                                                
+D.Clark              d2         $200,000                                                                                
+B.Wayne              d3         $300,000                                                                                
+O.Queen              d4         $400,000                                                                                
+
+
+
+
+
+
+
+
+
+                                COEN 178 Lab-7                                                   
