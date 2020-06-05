@@ -1,0 +1,67 @@
+SQL> start /home/bquant/COEN178/labs/lab5/queries2.sql
+
+Trigger created.
+
+No errors.
+
+TITLE                  EMPCOUNT LASTMODIF                                       
+-------------------- ---------- ---------                                       
+advisor                      56 04-MAY-20                                       
+director                     77 04-MAY-20                                       
+assistant                    79 04-MAY-20                                       
+manager                      83 04-MAY-20                                       
+supervisor                   88 04-MAY-20                                       
+janitor                      37 04-MAY-20                                       
+
+6 rows selected.
+
+
+1 row created.
+
+
+TITLE                  EMPCOUNT LASTMODIF                                       
+-------------------- ---------- ---------                                       
+advisor                      57 04-MAY-20                                       
+director                     77 04-MAY-20                                       
+assistant                    79 04-MAY-20                                       
+manager                      83 04-MAY-20                                       
+supervisor                   88 04-MAY-20                                       
+janitor                      37 04-MAY-20                                       
+
+6 rows selected.
+
+
+Trigger dropped.
+
+
+Trigger created.
+
+No errors.
+
+TITLE                  EMPCOUNT LASTMODIF                                       
+-------------------- ---------- ---------                                       
+advisor                      57 04-MAY-20                                       
+director                     77 04-MAY-20                                       
+assistant                    79 04-MAY-20                                       
+manager                      83 04-MAY-20                                       
+supervisor                   88 04-MAY-20                                       
+janitor                      37 04-MAY-20                                       
+
+6 rows selected.
+
+
+1 row deleted.
+
+
+TITLE                  EMPCOUNT LASTMODIF                                       
+-------------------- ---------- ---------                                       
+advisor                      56 04-MAY-20                                       
+director                     77 04-MAY-20                                       
+assistant                    79 04-MAY-20                                       
+manager                      83 04-MAY-20                                       
+supervisor                   88 04-MAY-20                                       
+janitor                      37 04-MAY-20                                       
+
+6 rows selected.
+
+SQL> spool off
