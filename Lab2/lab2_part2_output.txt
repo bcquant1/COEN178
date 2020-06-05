@@ -1,0 +1,108 @@
+SQL> start /home/bquant/COEN178/labs/lab2/lab2_queries1.sql
+
+CUSTI FULLNAME                  CITY                                            
+----- ------------------------- ----------                                      
+c1    JohnSmith                 SJ                                              
+c2    MaryJones                 SFO                                             
+a1    VincentChen               SJ                                              
+a12   GregKing                  SJ                                              
+c7    JamesBond                 LA                                              
+x10   SusanBlogg                SFO                                             
+c4    StephCurry                SFO                                             
+q1    BatMan                    Gotham                                          
+
+8 rows selected.
+
+
+CUSTI FIRSTNAME  LASTNAME        CITY                                           
+----- ---------- --------------- ----------                                     
+x10   Susan      Blogg           SFO                                            
+c7    James      Bond            LA                                             
+a1    Vincent    Chen            SJ                                             
+c4    Steph      Curry           SFO                                            
+c2    Mary       Jones           SFO                                            
+a12   Greg       King            SJ                                             
+q1    Bat        Man             Gotham                                         
+c1    John       Smith           SJ                                             
+
+8 rows selected.
+
+
+SERVICEID  CUSTI DA                                                             
+---------- ----- --                                                             
+dby3       x10   f                                                              
+dg5        c1    r                                                              
+dg5        c1    t                                                              
+dsg1       c1    m                                                              
+dsg1       a12   w                                                              
+dsg1       a1    r                                                              
+dsg2       c7    f                                                              
+
+7 rows selected.
+
+
+SERVICEID                                                                       
+----------                                                                      
+dsb1                                                                            
+dsm2                                                                            
+dubs5                                                                           
+dxy5                                                                            
+
+
+NAME                                                                            
+-------------------------                                                       
+JohnSmith                                                                       
+
+
+LASTNAME                                                                        
+---------------                                                                 
+Smith                                                                           
+King                                                                            
+Blogg                                                                           
+Chen                                                                            
+Bond                                                                            
+
+
+HIGHEST_SERVICEFEE                                                              
+------------------                                                              
+            123.45                                                              
+
+
+DA COUNT(DAY)                                                                   
+-- ----------                                                                   
+r           2                                                                   
+t           1                                                                   
+w           1                                                                   
+m           1                                                                   
+f           2                                                                   
+
+
+CUSTI CUSTI CITY                                                                
+----- ----- ----------                                                          
+c4    c2    SFO                                                                 
+x10   c2    SFO                                                                 
+a12   a1    SJ                                                                  
+c1    a1    SJ                                                                  
+c1    a12   SJ                                                                  
+x10   c4    SFO                                                                 
+
+6 rows selected.
+
+
+FIRSTNAME  LASTNAME        CITY                                                 
+---------- --------------- ----------                                           
+Greg       King            SJ                                                   
+Vincent    Chen            SJ                                                   
+John       Smith           SJ                                                   
+
+
+ MAXSALARY                                                                      
+----------                                                                      
+    179700                                                                      
+
+
+ MINSALARY                                                                      
+----------                                                                      
+         0                                                                      
+
+SQL> spool off
