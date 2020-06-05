@@ -1,0 +1,29 @@
+SQL> start /home/bquant/COEN178/labs/lab2/lab2_queries2.sql
+
+     EMPNO EMPNAME    DEPTI                                                     
+---------- ---------- -----                                                     
+         1 smith      d1                                                        
+         2 jones      d2                                                        
+         3 wayne      d1                                                        
+         4 moor       d3                                                        
+         5 king       d1                                                        
+         6 chen       d1                                                        
+         7 winger     d3                                                        
+
+7 rows selected.
+
+
+DEPTI DEPTNAME                                                                  
+----- ----------                                                                
+d1    Research                                                                  
+d2    Devt                                                                      
+d3    Testing                                                                   
+d4    Advert                                                                    
+
+
+EMPNAME                                                                         
+----------                                                                      
+moor                                                                            
+winger                                                                          
+
+SQL> spool off
