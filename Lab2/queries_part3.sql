@@ -1,0 +1,5 @@
+SELECT * FROM L_EMP;
+SELECT * FROM L_DEPT;
+
+SELECT empname FROM L_EMP WHERE L_EMP.deptId IN (SELECT deptId FROM L_DEPT WHERE deptname = 'Testing');
+
