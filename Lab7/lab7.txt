@@ -1,0 +1,242 @@
+SQL> start /home/bquant/COEN178/labs/lab7/queries.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+View created.
+
+
+View created.
+
+
+PROJE TITLE                MANAG                                                
+----- -------------------- -----                                                
+pj3   Testing              e3                                                   
+pd4   Leadership           e5                                                   
+
+
+TITLE                MANAG                                                      
+-------------------- -----                                                      
+Research             e1                                                         
+Research             e2                                                         
+
+
+1 row created.
+
+
+PROJE TITLE                    BUDGET STARTDATE ENDDATE   MANAG                 
+----- -------------------- ---------- --------- --------- -----                 
+pj1   Research                1000000 10-JAN-19 20-FEB-20 e1                    
+pj2   Research                 100000 10-FEB-19 20-APR-19 e2                    
+pj3   Testing                  200000 12-APR-19 20-SEP-21 e3                    
+pd4   Leadership                40000 15-SEP-19 21-OCT-21 e5                    
+p99   Testing                                             e2                    
+
+INSERT INTO PastProjects VALUES('testing','e2')
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("BQUANT"."PROJECT7"."PROJECTID") 
+
+
+
+View created.
+
+
+PROJE PROJECT_TITLE        MANAGERNAME                                          
+----- -------------------- --------------------                                 
+pj1   Research             J.Smith                                              
+pj2   Research             M.Jones                                              
+pj3   Testing              D.Clark                                              
+pd4   Leadership           O.Queen                                              
+p99   Testing              M.Jones                                              
+
+INSERT INTO ManagedProjects VALUES('p88','Design','Mary Mason')
+*
+ERROR at line 1:
+ORA-01776: cannot modify more than one base table through a join view 
+
+
+
+Table created.
+
+
+Trigger created.
+
+No errors.
+INSERT INTO ItemOrder values('o1',100)
+            *
+ERROR at line 1:
+ORA-04091: table BQUANT.ITEMORDER is mutating, trigger/function may not see it 
+ORA-06512: at "BQUANT.ITEMORDER_AFTER_INSERT_TRIG", line 4 
+ORA-04088: error during execution of trigger 
+'BQUANT.ITEMORDER_AFTER_INSERT_TRIG' 
+
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Trigger created.
+
+No errors.
+not found                                                                       
+
+1 row created.
+
+
+1 row created.
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+
+INSERT INTO Course_Prereq VALUES(121,12)
+            *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs or course 
+ORA-06512: at "BQUANT.LIMITTEST", line 16 
+ORA-04088: error during execution of trigger 'BQUANT.LIMITTEST' 
+
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+
+not found                                                                       
+
+1 row created.
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+       133         12                                                           
+
+update COURSE_PREREQ
+       *
+ERROR at line 1:
+ORA-04091: table BQUANT.COURSE_PREREQ is mutating, trigger/function may not see 
+it 
+ORA-06512: at "BQUANT.LIMITTEST", line 6 
+ORA-04088: error during execution of trigger 'BQUANT.LIMITTEST' 
+
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+       133         12                                                           
+
+
+3 rows deleted.
+
+
+Trigger created.
+
+No errors.
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO Course_Prereq VALUES(121,12)
+            *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs for course 
+ORA-06512: at "BQUANT.LIMITTEST", line 20 
+ORA-04088: error during execution of trigger 'BQUANT.LIMITTEST' 
+
+
+
+1 row created.
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+       133         12                                                           
+
+update COURSE_PREREQ
+       *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs for course 
+ORA-06512: at "BQUANT.LIMITTEST", line 20 
+ORA-04088: error during execution of trigger 'BQUANT.LIMITTEST' 
+
+
+
+  COURSENO   PREREQNO                                                           
+---------- ----------                                                           
+       121         11                                                           
+       121         10                                                           
+       133         12                                                           
+
+SQL> spool off
