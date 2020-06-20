@@ -2,6 +2,7 @@
 Database Systems
 
 Lab 1: Creating, editing, and deleting tables
+
 Lab 2: Learning how to write SQL queries with orderby, aggregate functions, subqueries, joining tables, checking constraints and using foreign keys
 Lab 3: SQL queries with subqueries and aggregate functions
 Lab 4: SQL Foreign Key constraints, regex expressions, random number generator, PLSQL procedures, cursors, and functions
