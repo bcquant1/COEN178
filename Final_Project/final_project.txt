@@ -1,0 +1,485 @@
+SQL> start /home/bquant/COEN178/final_project/run.sql
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+ITEMID                    PRICE                                                 
+-------------------- ----------                                                 
+Bat                        12.5                                                 
+Fla                       10.01                                                 
+Super                      5.25                                                 
+123                        20.5                                                 
+456                         130                                                 
+789                       10.25                                                 
+
+6 rows selected.
+
+
+ITEMID               ISBN          TITLE                PUBLISHED     COPIES    
+-------------------- ------------- -------------------- --------- ----------    
+Bat                  123456789     Batman               09-MAY-39         10    
+Fla                  975463646     Flash                12-JUN-96          1    
+Super                364635346     Superman             14-OCT-38       2000    
+
+
+ITEMID               SHIRT                                                      
+-------------------- -----                                                      
+123                  M                                                          
+456                  L                                                          
+789                  XXL                                                        
+
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+1234       Brandon Quant        quant@gmail.com                                 
+253 Stark Ave                            05-JAN-18 gold                         
+                                                                                
+3456       Tony Stark           stark@stark.com                                 
+100 Victory Road                         23-JAN-12 gold                         
+                                                                                
+420        John Smith           jsmith@gmail.com                                
+123 Smith Road                                     regular                      
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+30         Steph Curry          curry@warriors.com                              
+1 Chase Ave                                        regular                      
+                                                                                
+11         Klay Thompson        klay@warriors.com                               
+2 Chase Ave                              15-NOV-11 gold                         
+                                                                                
+
+
+Procedure created.
+
+No errors.
+
+Trigger created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Function created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('1')                                                               
+-----------------                                                               
+            13.13                                                               
+
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('2')                                                               
+-----------------                                                               
+           128.13                                                               
+
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('3')                                                               
+-----------------                                                               
+           561.25                                                               
+
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('4')                                                               
+-----------------                                                               
+           496.13                                                               
+
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('5')                                                               
+-----------------                                                               
+           968.63                                                               
+
+
+PL/SQL procedure successfully completed.
+
+
+COMPUTETOTAL('6')                                                               
+-----------------                                                               
+           117.63                                                               
+
+
+ITEMID               ISBN          TITLE                PUBLISHED     COPIES    
+-------------------- ------------- -------------------- --------- ----------    
+Bat                  123456789     Batman               09-MAY-39          0    
+Fla                  975463646     Flash                12-JUN-96          1    
+Super                364635346     Superman             14-OCT-38       1800    
+
+We dont have enough books for your order                                        
+
+PL/SQL procedure successfully completed.
+
+We dont have enough books for your order                                        
+
+PL/SQL procedure successfully completed.
+
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+1234       Brandon Quant        quant@gmail.com                                 
+253 Stark Ave                            05-JAN-18 gold                         
+                                                                                
+3456       Tony Stark           stark@stark.com                                 
+100 Victory Road                         23-JAN-12 gold                         
+                                                                                
+420        John Smith           jsmith@gmail.com                                
+123 Smith Road                                     regular                      
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+30         Steph Curry          curry@warriors.com                              
+1 Chase Ave                                        regular                      
+                                                                                
+11         Klay Thompson        klay@warriors.com                               
+2 Chase Ave                              15-NOV-11 gold                         
+                                                                                
+
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1          Bat                  1234       01-MAY-20          1                 
+          0                                                                     
+                                                                                
+2          Bat                  30         03-MAY-20          9                 
+         10                                                                     
+                                                                                
+3          Super                30         02-MAY-20        100                 
+         10                                                                     
+                                                                                
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+4          Super                3456       03-MAY-20        100                 
+          0                                                                     
+                                                                                
+5          123                  1234       17-MAY-20         50                 
+          0                                                                     
+                                                                                
+6          789                  420        06-MAY-20         10                 
+         10                                                                     
+                                                                                
+
+6 rows selected.
+
+
+1 row updated.
+
+
+1 row updated.
+
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+1234       Brandon Quant        quant@gmail.com                                 
+253 Stark Ave                            05-JAN-18 gold                         
+                                                                                
+3456       Tony Stark           stark@stark.com                                 
+100 Victory Road                                   regular                      
+                                                                                
+420        John Smith           jsmith@gmail.com                                
+123 Smith Road                           25-DEC-17 gold                         
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- --------------------                            
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+30         Steph Curry          curry@warriors.com                              
+1 Chase Ave                                        regular                      
+                                                                                
+11         Klay Thompson        klay@warriors.com                               
+2 Chase Ave                              15-NOV-11 gold                         
+                                                                                
+
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1          Bat                  1234       01-MAY-20          1                 
+          0                                                                     
+                                                                                
+2          Bat                  30         03-MAY-20          9                 
+         10                                                                     
+                                                                                
+3          Super                30         02-MAY-20        100                 
+         10                                                                     
+                                                                                
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+4          Super                3456       03-MAY-20        100                 
+         10                                                                     
+                                                                                
+5          123                  1234       17-MAY-20         50                 
+          0                                                                     
+                                                                                
+6          789                  420        06-MAY-20         10                 
+          0                                                                     
+                                                                                
+
+6 rows selected.
+
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1          Bat                  1234       01-MAY-20          1                 
+          0                                                                     
+                                                                                
+2          Bat                  30         03-MAY-20          9                 
+         10                                                                     
+                                                                                
+3          Super                30         02-MAY-20        100                 
+         10                                                                     
+                                                                                
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+4          Super                3456       03-MAY-20        100                 
+         10                                                                     
+                                                                                
+5          123                  1234       17-MAY-20         50                 
+          0                                                                     
+                                                                                
+6          789                  420        06-MAY-20         10                 
+          0                                                                     
+                                                                                
+
+6 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+The Shipping Date cannot be less than the Order Date                            
+
+PL/SQL procedure successfully completed.
+
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+1          Bat                  1234       01-MAY-20          1 02-MAY-20       
+          0                                                                     
+                                                                                
+2          Bat                  30         03-MAY-20          9 04-MAY-20       
+         10                                                                     
+                                                                                
+3          Super                30         02-MAY-20        100 03-MAY-20       
+         10                                                                     
+                                                                                
+
+ORDERID    ITEMID               CUSTID     ORDERDATE  NOOFITEMS SHIPPEDDA       
+---------- -------------------- ---------- --------- ---------- ---------       
+SHIPPINGFEE                                                                     
+-----------                                                                     
+4          Super                3456       03-MAY-20        100 04-MAY-20       
+         10                                                                     
+                                                                                
+5          123                  1234       17-MAY-20         50 18-MAY-20       
+          0                                                                     
+                                                                                
+6          789                  420        06-MAY-20         10                 
+          0                                                                     
+                                                                                
+
+6 rows selected.
+
+CUSTOMER DETAILS:                                                               
+Customer ID: 30
+Name: Steph Curry
+Email: curry@warriors.com                     
+Address: 1 Chase Ave                                                            
+                                                                               
+COMIC BOOK ORDERS:                                                              
+Order ID: 2
+Item ID: Bat
+Title: 12.5
+Price: $12.5                               
+Date Ordered: 03-MAY-20
+Shipped Date: 04-MAY-20                                 
+                                                                               
+PAYMENT DETAILS:                                                                
+Number of Items: 9
+Discount: $0
+Shipping Fee: $10
+Tax: $5.63                    
+Order Total: $128.13                                                            
+                                                                               
+Order ID: 3
+Item ID: Super
+Title: 5.25
+Price: $5.25                             
+Date Ordered: 02-MAY-20
+Shipped Date: 03-MAY-20                                 
+                                                                               
+PAYMENT DETAILS:                                                                
+Number of Items: 100
+Discount: $0
+Shipping Fee: $10
+Tax: $26.25                 
+Order Total: $561.25                                                            
+                                                                               
+TSHIRT ORDERS:                                                                  
+Grand Total: $689.38                                                            
+
+PL/SQL procedure successfully completed.
+
+CUSTOMER DETAILS:                                                               
+Customer ID: 1234
+Name: Brandon Quant
+Email: quant@gmail.com                    
+Address: 253 Stark Ave                                                          
+                                                                               
+COMIC BOOK ORDERS:                                                              
+TSHIRT ORDERS:                                                                  
+Order ID: 5
+Item ID: 123
+Title: 20.5
+Price: $20.5
+Date Ordered: 17-MAY-20       
+Shipped Date: 18-MAY-20                                                         
+                                                                               
+PAYMENT DETAILS:                                                                
+Number of Items: 50
+Discount: $102.5
+Shipping Fee: $0
+Tax: $46.13               
+Order Total: $968.63                                                            
+                                                                               
+Grand Total: $968.63                                                            
+
+PL/SQL procedure successfully completed.
+
+SQL> spool off
