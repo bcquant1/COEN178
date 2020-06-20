@@ -1,0 +1,27 @@
+SQL> DEFINE_EDITOR = "vim"
+SQL> edit data.sql
+
+SQL> start /home/bquant/COEN178/labs/lab1/data.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> SELECT * from test;
+
+      TNUM STR                                                                  
+---------- ----------                                                           
+         1 A test                                                               
+        10 ten                                                                  
+        11 eleven                                                               
+        12 twelve                                                               
+        13 thirteen                                                             
+
+SQL> spool off
